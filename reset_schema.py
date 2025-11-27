@@ -6,7 +6,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 try:
     from config import settings
-    print("🔗 Підключення до бази даних...")
+    print(" Підключення до бази даних...")
     
     engine = create_engine(settings.postgres_sync)
     
@@ -21,7 +21,7 @@ try:
         if result.fetchone():
             print(" Схема lr3_schema існує в базі даних")
         else:
-            print("❌ Помилка: схема не створилася")
+            print(" Помилка: схема не створилася")
             
 except ImportError:
     print(" Не вдалося імпортувати налаштування")
